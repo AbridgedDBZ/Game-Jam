@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ciljgnyjdqkpt"
-path="res://.godot/imported/seasonal sample (winter).png-62707437863c85438022cf23f2ebeba4.ctex"
+uid="uid://de0jbucrnspdi"
+path="res://.godot/imported/mummy boy W Cloak FFI-1.png-a6885327873e9400ab2d67e69527e53d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Seasonal Tilesets/seasonal sample (winter).png"
-dest_files=["res://.godot/imported/seasonal sample (winter).png-62707437863c85438022cf23f2ebeba4.ctex"]
+source_file="res://Sprites/Mummy clock/mummy boy W Cloak FFI-1.png"
+dest_files=["res://.godot/imported/mummy boy W Cloak FFI-1.png-a6885327873e9400ab2d67e69527e53d.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uypg1r6pkcms"
-path="res://.godot/imported/seasonal sample (spring).png-3be6b2bef0cea7613b65a9f3ed524210.ctex"
+uid="uid://g4ygl624nnny"
+path="res://.godot/imported/seasonal sample (summer).png-c225fe7bb845e12af406407dad1d73e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Seasonal Tilesets/seasonal sample (spring).png"
-dest_files=["res://.godot/imported/seasonal sample (spring).png-3be6b2bef0cea7613b65a9f3ed524210.ctex"]
+source_file="res://Art/seasonal sample (summer).png"
+dest_files=["res://.godot/imported/seasonal sample (summer).png-c225fe7bb845e12af406407dad1d73e0.ctex"]
 
 [params]
 
