@@ -15,6 +15,14 @@ run/main_scene="res://Scenes/map.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://Art/icon.svg"
 
+[autoload]
+
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
+
 [input]
 
 ui_left={
@@ -87,6 +95,10 @@ attack={
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":2,"pressure":0.0,"pressed":true,"script":null)
 ]
 }
+
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://Scenes/Dailogue/main.dialogue", "res://Scenes/Dailogue/start.dialogue")
 
 [rendering]
 
