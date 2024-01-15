@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqtyh4odhuq5w"]
+
+[ext_resource type="FontFile" uid="uid://dae5ubr2wjymi" path="res://PixelByzantine.ttf" id="1_h47th"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b30wa"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[node name="Textbox" type="CanvasLayer"]
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+offset_left = 16.0
+offset_top = 454.0
+offset_right = 1136.0
+offset_bottom = 632.0
+
+[node name="Panel" type="Panel" parent="MarginContainer2"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer2"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Panel" type="Panel" parent="MarginContainer2/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_b30wa")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer2/MarginContainer"]
+layout_mode = 2
+
+[node name="Start" type="Label" parent="MarginContainer2/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_h47th")
+theme_override_font_sizes/font_size = 43
+text = "*"
+
+[node name="Label" type="Label" parent="MarginContainer2/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_h47th")
+theme_override_font_sizes/font_size = 43
+text = "Text!"
+
+[node name="End" type="Label" parent="MarginContainer2/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_h47th")
+theme_override_font_sizes/font_size = 43
+text = "v"

@@ -2646,4 +2646,6 @@ position = Vector2(248, 127)
 shape = SubResource("RectangleShape2D_6ki75")
 
 [node name="Mummy" parent="." instance=ExtResource("8_3gqaj")]
-position = Vector2(113, 292)
+position = Vector2(117, 212)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
