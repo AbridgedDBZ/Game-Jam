@@ -5,9 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://de0jbucrnspdi" path="res://Sprites/Mummy clock/mummy boy W Cloak FFI-1.png" id="3_itra4"]
 [ext_resource type="Texture2D" uid="uid://d1h27mft1rbjy" path="res://Sprites/Mummy clock/mummy boy W Cloak RFI-1.png" id="4_ssjiv"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r5uib"]
-height = 34.0
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_v7f08"]
 atlas = ExtResource("2_13cxj")
 region = Rect2(0, 0, 32, 32)
@@ -62,26 +59,31 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r5uib"]
+radius = 5.0
+height = 14.0
+
 [node name="Mummy" type="CharacterBody2D"]
+y_sort_enabled = true
 script = ExtResource("1_kvpo0")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(0, -29)
-zoom = Vector2(1.75, 1.75)
+position = Vector2(1, -14)
+zoom = Vector2(2, 2)
 position_smoothing_speed = 10.0
 drag_left_margin = 0.0
 drag_top_margin = 0.0
 drag_right_margin = 0.0
 drag_bottom_margin = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, -3)
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_r5uib")
-
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1, -16)
 scale = Vector2(1.01563, 0.960938)
 sprite_frames = SubResource("SpriteFrames_5luco")
 animation = &"front_idle"
 autoplay = "front_idle"
+offset = Vector2(0, -15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -6)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_r5uib")
