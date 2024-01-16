@@ -1,47 +1,44 @@
 extends CharacterBody2D
 
-const speed = 250
+@export var speed = 200
+
 var current_dir = "none"
 
 func _ready():
 	$Sprite2D.play("front_idle")
-
-func _physics_process(_delta):
-	player_movement(_delta)
-
-func player_movement(_delta):
+	
+func get_input():
+	var input_direction := Input.get_vector("left", "right", "up", "down")
 	
 	if Input.is_action_pressed("ui_right"):
 		current_dir = "right"
 		play_anim(1)
-		velocity.x = speed
-		velocity.y = 0
+		velocity = input_direction * speed
 	elif Input.is_action_pressed("ui_left"):
 		current_dir = "left"
 		play_anim(1)
-		velocity.x = -speed
-		velocity.y = 0
+		velocity = input_direction * speed
 	elif Input.is_action_pressed("ui_down"):
 		current_dir = "down"
 		play_anim(1)
-		velocity.y = speed
-		velocity.x = 0
+		velocity = input_direction * speed
 	elif Input.is_action_pressed("ui_up"):
 		current_dir = "up"
 		play_anim(1)
-		velocity.y = -speed
-		velocity.x = 0
+		velocity = input_direction * speed
 	else:
 		play_anim(0)
 		velocity.x = 0
 		velocity.y = 0
-
-	move_and_slide()
-
-func play_anim(movement):
-	var dir = current_dir
-	var anim = $Sprite2D
 	
+func _physics_process(_delta):
+	get_input()
+	move_and_slide()
+	
+func play_anim(movement):
+	var anim = $Sprite2D
+	var dir = current_dir
+
 	if dir == "right":
 		anim.flip_h = false
 		if movement == 1:

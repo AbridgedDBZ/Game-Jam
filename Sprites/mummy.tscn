@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ccrsalhhu8ug5"]
+[gd_scene load_steps=13 format=3 uid="uid://ccrsalhhu8ug5"]
 
 [ext_resource type="Script" path="res://Scripts/Sprites/mummy.gd" id="1_kvpo0"]
 [ext_resource type="Texture2D" uid="uid://1urissqvx7uy" path="res://Sprites/Mummy clock/mummy boy W Cloak BFI-1.png" id="2_13cxj"]
@@ -9,11 +9,23 @@
 atlas = ExtResource("2_13cxj")
 region = Rect2(0, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ukv7"]
+atlas = ExtResource("2_13cxj")
+region = Rect2(0, 0, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_jy3w1"]
 atlas = ExtResource("3_itra4")
 region = Rect2(0, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2eb6"]
+atlas = ExtResource("3_itra4")
+region = Rect2(0, 0, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_m44wv"]
+atlas = ExtResource("4_ssjiv")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ewmvt"]
 atlas = ExtResource("4_ssjiv")
 region = Rect2(0, 0, 32, 32)
 
@@ -27,7 +39,10 @@ animations = [{
 "name": &"back_idle",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ukv7")
+}],
 "loop": true,
 "name": &"back_walk",
 "speed": 5.0
@@ -40,7 +55,10 @@ animations = [{
 "name": &"front_idle",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2eb6")
+}],
 "loop": true,
 "name": &"front_walk",
 "speed": 5.0
@@ -53,7 +71,10 @@ animations = [{
 "name": &"side_idle",
 "speed": 10.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ewmvt")
+}],
 "loop": true,
 "name": &"side_walk",
 "speed": 5.0
@@ -79,7 +100,7 @@ drag_bottom_margin = 0.0
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(1.01563, 0.960938)
 sprite_frames = SubResource("SpriteFrames_5luco")
-animation = &"front_idle"
+animation = &"back_walk"
 autoplay = "front_idle"
 offset = Vector2(0, -15)
 
