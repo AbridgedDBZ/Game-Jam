@@ -1,12 +1,13 @@
-[gd_scene load_steps=16 format=3 uid="uid://bm55rludhdwml"]
+[gd_scene load_steps=17 format=3 uid="uid://bt3ywbek4rgbl"]
 
+[ext_resource type="Script" path="res://Scripts/Areas/map.gd" id="1_apav6"]
 [ext_resource type="Texture2D" uid="uid://bjo5ubdnsbb8h" path="res://Art/Houses Demo/Exterrior/ready_to_use_houses.png" id="2_3do4e"]
 [ext_resource type="Texture2D" uid="uid://c2kvf6sfxhsbk" path="res://Art/Houses Demo/Exterrior/floor_and_deoratives.png" id="3_wgnfs"]
 [ext_resource type="Texture2D" uid="uid://g4ygl624nnny" path="res://Art/seasonal sample (summer).png" id="4_tvgup"]
 [ext_resource type="Texture2D" uid="uid://uypg1r6pkcms" path="res://Art/seasonal sample (spring).png" id="5_2sjgq"]
 [ext_resource type="Texture2D" uid="uid://dc8bob3lqjhly" path="res://Art/seasonal sample (autumn).png" id="6_qsu44"]
 [ext_resource type="Texture2D" uid="uid://ciljgnyjdqkpt" path="res://Art/seasonal sample (winter).png" id="7_mdyd6"]
-[ext_resource type="PackedScene" uid="uid://ccrsalhhu8ug5" path="res://Sprites/mummy.tscn" id="8_3gqaj"]
+[ext_resource type="PackedScene" uid="uid://ccrsalhhu8ug5" path="res://Scenes/mummy.tscn" id="8_3gqaj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0rr2g"]
 texture = ExtResource("6_qsu44")
@@ -2590,15 +2591,17 @@ sources/6 = SubResource("TileSetAtlasSource_t7g17")
 sources/7 = SubResource("TileSetAtlasSource_dmux3")
 sources/8 = SubResource("TileSetAtlasSource_l0gjg")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ki75"]
-size = Vector2(32, 38)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bjuy2"]
+size = Vector2(39, 37)
 
-[node name="Node2D" type="Node2D"]
+[node name="Map" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_apav6")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
 texture_filter = 1
+position = Vector2(2, 0)
 tile_set = SubResource("TileSet_ah6ky")
 format = 2
 layer_0/name = "floor"
@@ -2615,37 +2618,15 @@ layer_3/modulate = Color(0.933333, 0.933333, 0.933333, 1)
 layer_3/y_sort_enabled = true
 layer_3/tile_data = PackedInt32Array(1638442, 720901, 0, 2555935, 720901, 0, 3276845, 720901, 0, 3604505, 720901, 0, 3014724, 720901, 0, 2424906, 720901, 0, 2883663, 720901, 0, 1572933, 720901, 0, 1179700, 720901, 0, 3735619, 720901, 0, 2687043, 131077, 8, 2752555, 196613, 14, 3539000, 720901, 0, 917583, 917512, 0, 1245289, 2621448, 0, 2228280, 3473416, 0, 2228261, 6881288, 4, 262160, 65544, 0, 720863, 2621448, 0, 3604586, 917512, 0, 3604531, 786439, 0, 3604575, 786439, 0, 1507418, 786439, 0, 3735597, 983047, 0, 2818098, 65541, 8, 2752558, 5, 8, 2752564, 5, 9, 2621483, 262149, 9, 2883637, 262149, 8, 26, 720901, 0, 720921, 720901, 0, -65531, 720901, 0, 393217, 720901, 0, 1441804, 720901, 0, 1245216, 720901, 0, 2097168, 720901, 0, 2621444, 720901, 0, 2949132, 720901, 0, 1835015, 720901, 0, 3997731, 720901, 0, 3735563, 720901, 0, 3407890, 720901, 0, 4063284, 720901, 0, 3997772, 720901, 0, 3997757, 720901, 0, 2293854, 720901, 0, 2097265, 720901, 0, 2490474, 720901, 0, 2949217, 720901, 0, 3014770, 720901, 0, 4063346, 720901, 0, 1376342, 720901, 0, 983136, 720901, 0, 589938, 720901, 0, 458840, 720901, 0, 131174, 720901, 0, 786496, 720901, 0, 393270, 720901, 0, 262184, 720901, 0, 65601, 720901, 0, 983083, 720901, 0, 2097181, 131077, 8, 2686995, 131077, 8, 3473445, 131077, 8, 3276876, 131077, 8, 3407970, 131077, 8, 4325482, 131077, 8, 3997778, 131077, 8, 3866681, 131077, 8, 1572881, 131077, 8, 131081, 131077, 8, 851988, 131077, 8, 393263, 131077, 8, 1245244, 131077, 8, 1245275, 131077, 8, 1835117, 131077, 8, 2556004, 131077, 8, 2031689, 131077, 8, 262253, 131077, 8, 65619, 131077, 8, 3735624, 65541, 8, 3801184, 65541, 8, 4128879, 65541, 8, 2359378, 65541, 8, 1704020, 65541, 8, 1507425, 65541, 8, 1376330, 65541, 8, 2818078, 65541, 8, 1835039, 65541, 8, 2359305, 65541, 8, 4063251, 65541, 8, 4259885, 65541, 8, 3145731, 65541, 8, 2949230, 65541, 8, 1114226, 65541, 8, 524385, 65541, 8, 393287, 65541, 8, 720931, 65541, 8, 851980, 65541, 8, 1048578, 65541, 8, 11, 65541, 8)
 
-[node name="Mayors House" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mayors House"]
-position = Vector2(1000, 613.5)
-shape = SubResource("RectangleShape2D_6ki75")
-
-[node name="Bottom right House" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom right House"]
-position = Vector2(1696, 933)
-shape = SubResource("RectangleShape2D_6ki75")
-
-[node name="Top right House" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Top right House"]
-position = Vector2(1680, 388.75)
-shape = SubResource("RectangleShape2D_6ki75")
-
-[node name="Mummy Village Hosue" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mummy Village Hosue"]
-position = Vector2(1264, 275.5)
-shape = SubResource("RectangleShape2D_6ki75")
-
-[node name="Top left House" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Top left House"]
-position = Vector2(248, 127)
-shape = SubResource("RectangleShape2D_6ki75")
-
 [node name="Mummy" parent="." instance=ExtResource("8_3gqaj")]
-position = Vector2(117, 212)
+position = Vector2(1679, 471)
+
+[node name="house1_transition_area" type="Area2D" parent="."]
+position = Vector2(1679, 390)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="house1_transition_area"]
+shape = SubResource("RectangleShape2D_bjuy2")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[connection signal="body_entered" from="house1_transition_area" to="." method="_on_house_1_transition_area_body_entered"]
