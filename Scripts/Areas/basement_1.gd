@@ -7,4 +7,7 @@ func _process(_delta):
 	pass
 
 func _on_area_2d_body_entered(_body):
-	get_tree().change_scene_to_file("res://Scenes/Inside_house1.tscn")
+	var inside_house := func():
+		get_tree().change_scene_to_file("res://Scenes/Inside_house1.tscn")
+	inside_house.call_deferred()
+	
