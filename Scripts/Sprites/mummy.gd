@@ -7,6 +7,9 @@ var current_dir = "none"
 func _ready():
 	$Sprite2D.play("front_idle")
 	
+func player():
+	pass
+
 func get_input():
 	var input_direction := Input.get_vector("left", "right", "up", "down")
 	
@@ -34,7 +37,7 @@ func get_input():
 func _physics_process(_delta):
 	get_input()
 	move_and_slide()
-	
+
 func play_anim(movement):
 	var anim = $Sprite2D
 	var dir = current_dir

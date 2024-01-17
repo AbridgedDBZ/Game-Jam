@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1urissqvx7uy"
-path="res://.godot/imported/mummy boy W Cloak BFI-1.png-5b08be72f234503f27835e0ede450011.ctex"
+uid="uid://d1h27mft1rbjy"
+path="res://.godot/imported/mummy boy W Cloak RFI-1.png-73c6c99c3ce33cc07d6cf0cafc4f5b43.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Mummy clock/mummy boy W Cloak BFI-1.png"
-dest_files=["res://.godot/imported/mummy boy W Cloak BFI-1.png-5b08be72f234503f27835e0ede450011.ctex"]
+source_file="res://Art/Mummy clock/mummy boy W Cloak RFI-1.png"
+dest_files=["res://.godot/imported/mummy boy W Cloak RFI-1.png-73c6c99c3ce33cc07d6cf0cafc4f5b43.ctex"]
 
 [params]
 

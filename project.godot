@@ -15,6 +15,10 @@ run/main_scene="res://Scenes/map.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://Art/icon.svg"
 
+[audio]
+
+buses/default_bus_layout=""
+
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
@@ -96,9 +100,9 @@ attack={
 ]
 }
 
-[internationalization]
+[layer_names]
 
-locale/translations_pot_files=PackedStringArray("res://Scenes/Dailogue/main.dialogue", "res://Scenes/Dailogue/start.dialogue")
+2d_render/layer_3="Start_battle"
 
 [rendering]
 

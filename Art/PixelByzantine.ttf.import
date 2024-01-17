@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dae5ubr2wjymi"
-path="res://.godot/imported/PixelByzantine.ttf-649873045aa22f2e6d854a616e7174ff.fontdata"
+path="res://.godot/imported/PixelByzantine.ttf-ebb5b0b3ff27b4f4a6dd0a36d206f8f6.fontdata"
 
 [deps]
 
-source_file="res://PixelByzantine.ttf"
-dest_files=["res://.godot/imported/PixelByzantine.ttf-649873045aa22f2e6d854a616e7174ff.fontdata"]
+source_file="res://Art/PixelByzantine.ttf"
+dest_files=["res://.godot/imported/PixelByzantine.ttf-ebb5b0b3ff27b4f4a6dd0a36d206f8f6.fontdata"]
 
 [params]
 
