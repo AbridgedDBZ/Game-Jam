@@ -1,29 +1,29 @@
-[gd_scene load_steps=43 format=3 uid="uid://bcnqv5aanqag6"]
+[gd_scene load_steps=43 format=3 uid="uid://cxx0c2vyr4f6h"]
 
-[ext_resource type="Script" path="res://Scripts/Areas/mayors_house.gd" id="1_cugqd"]
-[ext_resource type="Texture2D" uid="uid://gtdig76c3vd6" path="res://Art/Houses Demo/_PNG/Interriors/FL_Houses_int_sidesOfTheHouses.png" id="2_hyj3e"]
-[ext_resource type="Texture2D" uid="uid://7124niijwtnx" path="res://Art/Houses Demo/_PNG/Interriors/FL_Houses_int_building elements.png" id="3_vkdr8"]
-[ext_resource type="Texture2D" uid="uid://de5smrsw6nl1t" path="res://Art/Houses Demo/_PNG/Interriors/Walls/FL_Houses_int_WallsA1.png" id="4_dbpug"]
-[ext_resource type="Texture2D" uid="uid://dpncrv6qtjpwc" path="res://Art/Houses Demo/_PNG/Interriors/Walls/FL_Houses_int_WallsA2.png" id="5_mhas1"]
-[ext_resource type="Texture2D" uid="uid://skh67vwl5qby" path="res://Art/Houses Demo/_PNG/Interriors/Walls/FL_Houses_int_WallsA3.png" id="6_juc16"]
-[ext_resource type="Texture2D" uid="uid://0wllxb0lbvv5" path="res://Art/Houses Demo/_PNG/Interriors/Walls/FL_Houses_int_WallsA4.png" id="7_6h560"]
-[ext_resource type="Texture2D" uid="uid://dsssnjorqup67" path="res://Art/Houses Demo/_PNG/Interriors/Walls/FL_Houses_int_WallsA5.png" id="8_l1xg8"]
-[ext_resource type="Texture2D" uid="uid://lgcpiaeqnno7" path="res://Art/Houses Demo/_PNG/Interriors/Walls/FL_Houses_int_WallsB1.png" id="9_mcbyb"]
-[ext_resource type="Texture2D" uid="uid://4p0kda5nw2cd" path="res://Art/Houses Demo/_PNG/Interriors/Walls/FL_Houses_int_WallsB2.png" id="10_2um2j"]
-[ext_resource type="Texture2D" uid="uid://ry1svnr6tx6" path="res://Art/Houses Demo/_PNG/Interriors/Walls/FL_Houses_int_WallsB3.png" id="11_ateeh"]
-[ext_resource type="Texture2D" uid="uid://dag4irjif5uss" path="res://Art/Houses Demo/_PNG/Interriors/Walls/FL_Houses_int_WallsB4.png" id="12_5hn24"]
-[ext_resource type="Texture2D" uid="uid://blj0fll8m2hxb" path="res://Art/Houses Demo/_PNG/Interriors/Walls/FL_Houses_int_WallsB5.png" id="13_emt41"]
-[ext_resource type="Texture2D" uid="uid://c16bpduw5a8q6" path="res://Art/Houses Demo/_PNG/Interriors/Walls/FL_Houses_int_WallsC.png" id="14_7mk5h"]
-[ext_resource type="Texture2D" uid="uid://bjdu0bf3mux80" path="res://Art/Houses Demo/_PNG/Interriors/Walls/FL_Houses_int_WallsD.png" id="15_50n2p"]
-[ext_resource type="Texture2D" uid="uid://dem43dl6lgron" path="res://Art/Houses Demo/_PNG/Interriors/Floors/FL_Houses_int_Floors.png" id="16_swkwy"]
-[ext_resource type="Texture2D" uid="uid://b0yxl47um1nhw" path="res://Art/Houses Demo/_PNG/Interriors/Furnitures/FL_Houses_int_FurnituresA.png" id="17_4trrj"]
-[ext_resource type="Texture2D" uid="uid://brlkonb8se8xm" path="res://Art/Houses Demo/_PNG/Interriors/Furnitures/FL_Houses_int_FurnituresB.png" id="18_o0u38"]
-[ext_resource type="Texture2D" uid="uid://bkffh3gcy0pdp" path="res://Art/Houses Demo/_PNG/Interriors/Furnitures/FL_Houses_int_FurnituresC.png" id="19_k74ha"]
-[ext_resource type="Texture2D" uid="uid://c10a0g4m35nd8" path="res://Art/Houses Demo/_PNG/Interriors/Furnitures/FL_Houses_int_small_objects.png" id="20_h31ki"]
-[ext_resource type="PackedScene" uid="uid://ccrsalhhu8ug5" path="res://Scenes/mummy.tscn" id="21_47f5s"]
+[ext_resource type="Script" path="res://Scripts/Areas/mayors_house.gd" id="1_cwcqx"]
+[ext_resource type="Texture2D" uid="uid://gtdig76c3vd6" path="res://Art/Houses Demo/_PNG/Interriors/FL_Houses_int_sidesOfTheHouses.png" id="2_bry33"]
+[ext_resource type="Texture2D" uid="uid://7124niijwtnx" path="res://Art/Houses Demo/_PNG/Interriors/FL_Houses_int_building elements.png" id="3_xaa2w"]
+[ext_resource type="Texture2D" uid="uid://de5smrsw6nl1t" path="res://Art/Houses Demo/_PNG/Interriors/Walls/FL_Houses_int_WallsA1.png" id="4_85mj3"]
+[ext_resource type="Texture2D" uid="uid://dpncrv6qtjpwc" path="res://Art/Houses Demo/_PNG/Interriors/Walls/FL_Houses_int_WallsA2.png" id="5_slgdw"]
+[ext_resource type="Texture2D" uid="uid://skh67vwl5qby" path="res://Art/Houses Demo/_PNG/Interriors/Walls/FL_Houses_int_WallsA3.png" id="6_6y8a5"]
+[ext_resource type="Texture2D" uid="uid://0wllxb0lbvv5" path="res://Art/Houses Demo/_PNG/Interriors/Walls/FL_Houses_int_WallsA4.png" id="7_45kmh"]
+[ext_resource type="Texture2D" uid="uid://dsssnjorqup67" path="res://Art/Houses Demo/_PNG/Interriors/Walls/FL_Houses_int_WallsA5.png" id="8_64ihv"]
+[ext_resource type="Texture2D" uid="uid://lgcpiaeqnno7" path="res://Art/Houses Demo/_PNG/Interriors/Walls/FL_Houses_int_WallsB1.png" id="9_pydgx"]
+[ext_resource type="Texture2D" uid="uid://4p0kda5nw2cd" path="res://Art/Houses Demo/_PNG/Interriors/Walls/FL_Houses_int_WallsB2.png" id="10_8xpev"]
+[ext_resource type="Texture2D" uid="uid://ry1svnr6tx6" path="res://Art/Houses Demo/_PNG/Interriors/Walls/FL_Houses_int_WallsB3.png" id="11_fau0a"]
+[ext_resource type="Texture2D" uid="uid://dag4irjif5uss" path="res://Art/Houses Demo/_PNG/Interriors/Walls/FL_Houses_int_WallsB4.png" id="12_c2by4"]
+[ext_resource type="Texture2D" uid="uid://blj0fll8m2hxb" path="res://Art/Houses Demo/_PNG/Interriors/Walls/FL_Houses_int_WallsB5.png" id="13_s63cp"]
+[ext_resource type="Texture2D" uid="uid://c16bpduw5a8q6" path="res://Art/Houses Demo/_PNG/Interriors/Walls/FL_Houses_int_WallsC.png" id="14_7f777"]
+[ext_resource type="Texture2D" uid="uid://bjdu0bf3mux80" path="res://Art/Houses Demo/_PNG/Interriors/Walls/FL_Houses_int_WallsD.png" id="15_swrkt"]
+[ext_resource type="Texture2D" uid="uid://dem43dl6lgron" path="res://Art/Houses Demo/_PNG/Interriors/Floors/FL_Houses_int_Floors.png" id="16_5mqt5"]
+[ext_resource type="Texture2D" uid="uid://b0yxl47um1nhw" path="res://Art/Houses Demo/_PNG/Interriors/Furnitures/FL_Houses_int_FurnituresA.png" id="17_qdwxh"]
+[ext_resource type="Texture2D" uid="uid://brlkonb8se8xm" path="res://Art/Houses Demo/_PNG/Interriors/Furnitures/FL_Houses_int_FurnituresB.png" id="18_ovfa0"]
+[ext_resource type="Texture2D" uid="uid://bkffh3gcy0pdp" path="res://Art/Houses Demo/_PNG/Interriors/Furnitures/FL_Houses_int_FurnituresC.png" id="19_s141k"]
+[ext_resource type="Texture2D" uid="uid://c10a0g4m35nd8" path="res://Art/Houses Demo/_PNG/Interriors/Furnitures/FL_Houses_int_small_objects.png" id="20_rt10c"]
+[ext_resource type="PackedScene" uid="uid://ccrsalhhu8ug5" path="res://Scenes/mummy.tscn" id="21_6rlq1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_47yjg"]
-texture = ExtResource("2_hyj3e")
+texture = ExtResource("2_bry33")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -622,7 +622,7 @@ texture_region_size = Vector2i(32, 32)
 29:22/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_onv5o"]
-texture = ExtResource("3_vkdr8")
+texture = ExtResource("3_xaa2w")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -1096,7 +1096,7 @@ texture_region_size = Vector2i(32, 32)
 25:19/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ojiks"]
-texture = ExtResource("4_dbpug")
+texture = ExtResource("4_85mj3")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -1643,7 +1643,7 @@ texture_region_size = Vector2i(32, 32)
 20:17/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mthw5"]
-texture = ExtResource("5_mhas1")
+texture = ExtResource("5_slgdw")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -2190,7 +2190,7 @@ texture_region_size = Vector2i(32, 32)
 20:17/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h3y2n"]
-texture = ExtResource("6_juc16")
+texture = ExtResource("6_6y8a5")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -2737,7 +2737,7 @@ texture_region_size = Vector2i(32, 32)
 20:17/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r8x6l"]
-texture = ExtResource("7_6h560")
+texture = ExtResource("7_45kmh")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -3284,7 +3284,7 @@ texture_region_size = Vector2i(32, 32)
 20:17/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1wpb6"]
-texture = ExtResource("8_l1xg8")
+texture = ExtResource("8_64ihv")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -3831,7 +3831,7 @@ texture_region_size = Vector2i(32, 32)
 20:17/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hdmwa"]
-texture = ExtResource("9_mcbyb")
+texture = ExtResource("9_pydgx")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -4705,7 +4705,7 @@ texture_region_size = Vector2i(32, 32)
 28:29/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q28i7"]
-texture = ExtResource("10_2um2j")
+texture = ExtResource("10_8xpev")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -5579,7 +5579,7 @@ texture_region_size = Vector2i(32, 32)
 28:29/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dwn1n"]
-texture = ExtResource("11_ateeh")
+texture = ExtResource("11_fau0a")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -6453,7 +6453,7 @@ texture_region_size = Vector2i(32, 32)
 28:29/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yflhx"]
-texture = ExtResource("12_5hn24")
+texture = ExtResource("12_c2by4")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -7327,7 +7327,7 @@ texture_region_size = Vector2i(32, 32)
 28:29/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_348uk"]
-texture = ExtResource("13_emt41")
+texture = ExtResource("13_s63cp")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -8201,7 +8201,7 @@ texture_region_size = Vector2i(32, 32)
 28:29/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_upx7j"]
-texture = ExtResource("14_7mk5h")
+texture = ExtResource("14_7f777")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -8793,7 +8793,7 @@ texture_region_size = Vector2i(32, 32)
 29:20/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vsawc"]
-texture = ExtResource("15_50n2p")
+texture = ExtResource("15_swrkt")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -9070,7 +9070,7 @@ texture_region_size = Vector2i(32, 32)
 21:12/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j7mpe"]
-texture = ExtResource("16_swkwy")
+texture = ExtResource("16_5mqt5")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -9970,7 +9970,7 @@ texture_region_size = Vector2i(32, 32)
 27:21/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iwsqp"]
-texture = ExtResource("17_4trrj")
+texture = ExtResource("17_qdwxh")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -10236,7 +10236,7 @@ texture_region_size = Vector2i(32, 32)
 13:15/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jfseb"]
-texture = ExtResource("18_o0u38")
+texture = ExtResource("18_ovfa0")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -11269,7 +11269,7 @@ texture_region_size = Vector2i(32, 32)
 34:29/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p6o2h"]
-texture = ExtResource("19_k74ha")
+texture = ExtResource("19_s141k")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -11573,7 +11573,7 @@ texture_region_size = Vector2i(32, 32)
 19:18/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2n5tt"]
-texture = ExtResource("20_h31ki")
+texture = ExtResource("20_rt10c")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -11962,7 +11962,7 @@ sources/23 = SubResource("TileSetAtlasSource_vsawc")
 size = Vector2(32, 13)
 
 [node name="mayors_house" type="Node2D"]
-script = ExtResource("1_cugqd")
+script = ExtResource("1_cwcqx")
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -11985,7 +11985,7 @@ layer_6/tile_data = PackedInt32Array(196637, 917511, 6, 196636, 720903, 6, 26217
 layer_7/name = "kitchen2"
 layer_7/tile_data = PackedInt32Array(655375, 983048, 11, 327709, 1310728, 13, 262173, 1376264, 9, 655365, 786440, 8, 131082, 1441800, 11, 131083, 1114120, 11, 131078, 786440, 11, 458764, 851976, 12, 393230, 720904, 12, 458772, 393224, 13, 262166, 393224, 12, 524310, 786440, 11)
 
-[node name="Mummy" parent="." instance=ExtResource("21_47f5s")]
+[node name="Mummy" parent="." instance=ExtResource("21_6rlq1")]
 position = Vector2(559, 330)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
