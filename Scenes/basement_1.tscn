@@ -6002,7 +6002,7 @@ layer_6/name = "5"
 layer_6/tile_data = PackedInt32Array()
 
 [node name="Mummy" parent="." instance=ExtResource("11_20f7e")]
-position = Vector2(702, 303)
+position = Vector2(449, 117)
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(447, 74)

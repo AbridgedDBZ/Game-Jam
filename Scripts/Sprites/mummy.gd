@@ -1,12 +1,12 @@
 extends CharacterBody2D
 
-@export var speed = 150
+@export var speed: int = 150
 
-var current_dir = "none"
+var current_dir: String = "none"
 
 func _ready():
 	$Sprite2D.play("front_idle")
-	
+
 func player():
 	pass
 

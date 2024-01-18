@@ -9,5 +9,5 @@ func _process(delta):
 
 func _on_exit_mayor_house_body_entered(body):
 	var change_to_map := func():
-		get_tree().change_scene_to_file("res://Scenes/map.tscn")
+		get_tree().change_scene_to_file("res://Scenes/map_from_mayor.tscn")
 	change_to_map.call_deferred()
