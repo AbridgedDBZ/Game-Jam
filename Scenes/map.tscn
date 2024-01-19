@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dc8bob3lqjhly" path="res://Art/seasonal sample (autumn).png" id="6_qsu44"]
 [ext_resource type="Texture2D" uid="uid://ciljgnyjdqkpt" path="res://Art/seasonal sample (winter).png" id="7_mdyd6"]
 [ext_resource type="PackedScene" uid="uid://ccrsalhhu8ug5" path="res://Scenes/mummy.tscn" id="8_3gqaj"]
+[ext_resource type="PackedScene" uid="uid://bakyoalvmxq6" path="res://Scenes/door.tscn" id="12_ocdcu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_27lu1"]
 texture = ExtResource("2_uvp87")
@@ -5087,9 +5088,6 @@ sources/1 = SubResource("TileSetAtlasSource_m1pv7")
 sources/2 = SubResource("TileSetAtlasSource_j1p2t")
 sources/9 = SubResource("TileSetAtlasSource_b87el")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bjuy2"]
-size = Vector2(45.5, 48)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uejnj"]
 size = Vector2(41, 33)
 
@@ -5120,14 +5118,7 @@ layer_4/y_sort_enabled = true
 layer_4/tile_data = PackedInt32Array(1638442, 720901, 0, 2555935, 720901, 0, 1572933, 720901, 0, 1179700, 720901, 0, 3735619, 720901, 0, 2752555, 196613, 14, 917583, 917512, 0, 1245289, 2621448, 0, 2228261, 6881288, 4, 262160, 65544, 0, 3604586, 917512, 0, 3604575, 786439, 0, 1507418, 786439, 0, 2752558, 5, 8, 26, 720901, 0, 720921, 720901, 0, -65531, 720901, 0, 393217, 720901, 0, 1441804, 720901, 0, 1245216, 720901, 0, 2097168, 720901, 0, 2621444, 720901, 0, 2949132, 720901, 0, 1835015, 720901, 0, 3997772, 720901, 0, 2293854, 720901, 0, 2097265, 720901, 0, 2490474, 720901, 0, 2949217, 720901, 0, 3014770, 720901, 0, 1376342, 720901, 0, 983136, 720901, 0, 589938, 720901, 0, 458840, 720901, 0, 131174, 720901, 0, 786496, 720901, 0, 393270, 720901, 0, 262184, 720901, 0, 65601, 720901, 0, 983083, 720901, 0, 2097181, 131077, 8, 2686995, 131077, 8, 3276876, 131077, 8, 3407970, 131077, 8, 3997778, 131077, 8, 1572881, 131077, 8, 131081, 131077, 8, 851988, 131077, 8, 393263, 131077, 8, 1245244, 131077, 8, 1245275, 131077, 8, 1835117, 131077, 8, 2556004, 131077, 8, 2031689, 131077, 8, 262253, 131077, 8, 65619, 131077, 8, 3735624, 65541, 8, 3801184, 65541, 8, 2359378, 65541, 8, 1704020, 65541, 8, 1507425, 65541, 8, 1376330, 65541, 8, 2818078, 65541, 8, 1835039, 65541, 8, 2359305, 65541, 8, 2949230, 65541, 8, 1114226, 65541, 8, 524385, 65541, 8, 393287, 65541, 8, 720931, 65541, 8, 851980, 65541, 8, 1048578, 65541, 8, 11, 65541, 8, 720863, 0, 6, 2162747, 2883584, 9, 2621481, 262149, 9, 2818096, 65541, 8, 2555947, 5, 9, 2818113, 262149, 8, 2752591, 720901, 0, 3211204, 1441792, 16, 4128674, 851969, 14, 3014728, 720901, 0, 2949188, 131077, 8, 3211331, 786439, 0, 4063301, 720901, 0, 3407920, 786432, 268435464, 3342367, 327680, 8, 3669953, 196609, 25, 3997614, 1507329, 6, 3604390, 2752512, 0, 4718532, 2162688, 17, 4980670, 655361, 12, 5177279, 1572865, 25, 5111751, 589825, 8, 4587419, 0, 12, 4849560, 131073, 16, 4915100, 458753, 16, 4915104, 1114113, 1, 4652963, 1, 29, 4456374, 1114113, 23, 4915127, 1769473, 3, 4980666, 1769473, 0, 4980644, 262145, 20)
 
 [node name="Mummy" parent="." instance=ExtResource("8_3gqaj")]
-position = Vector2(1629, 485)
-
-[node name="house1_transition_area" type="Area2D" parent="."]
-position = Vector2(1679, 390)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="house1_transition_area"]
-position = Vector2(3.25, 0)
-shape = SubResource("RectangleShape2D_bjuy2")
+position = Vector2(1540, 499)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
@@ -5138,5 +5129,8 @@ position = Vector2(923, 566)
 position = Vector2(-1.5, -3.5)
 shape = SubResource("RectangleShape2D_uejnj")
 
-[connection signal="body_entered" from="house1_transition_area" to="." method="_on_house_1_transition_area_body_entered"]
+[node name="Door" parent="." instance=ExtResource("12_ocdcu")]
+position = Vector2(1680, 406)
+next_change_scene = "res://Scenes/Inside_house1.tscn"
+
 [connection signal="body_entered" from="enter_mayors_house" to="." method="_on_enter_mayors_house_body_entered"]

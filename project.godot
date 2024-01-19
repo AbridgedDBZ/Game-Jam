@@ -22,6 +22,7 @@ buses/default_bus_layout=""
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+globala="*res://globala.gd"
 
 [editor_plugins]
 

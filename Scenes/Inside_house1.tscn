@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://bkffh3gcy0pdp" path="res://Art/Houses Demo/_PNG/Interriors/Furnitures/FL_Houses_int_FurnituresC.png" id="18_7jcjk"]
 [ext_resource type="Texture2D" uid="uid://c10a0g4m35nd8" path="res://Art/Houses Demo/_PNG/Interriors/Furnitures/FL_Houses_int_small_objects.png" id="19_j4k30"]
 [ext_resource type="PackedScene" uid="uid://ccrsalhhu8ug5" path="res://Scenes/mummy.tscn" id="21_60ktx"]
+[ext_resource type="PackedScene" uid="uid://bakyoalvmxq6" path="res://Scenes/door.tscn" id="22_isnup"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_47yjg"]
 texture = ExtResource("1_uikuh")
@@ -11958,9 +11959,6 @@ sources/21 = SubResource("TileSetAtlasSource_348uk")
 sources/22 = SubResource("TileSetAtlasSource_upx7j")
 sources/23 = SubResource("TileSetAtlasSource_vsawc")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ucve2"]
-size = Vector2(25.5, 14)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kccvh"]
 size = Vector2(19, 40)
 
@@ -11994,13 +11992,6 @@ polygon = PackedVector2Array(-53, 289, 47, 289, 46.5748, 271.992, -15, 272, -14,
 [node name="Mummy" parent="." instance=ExtResource("21_60ktx")]
 position = Vector2(738, 590)
 
-[node name="house1_exit" type="Area2D" parent="."]
-position = Vector2(738, 629)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="house1_exit"]
-position = Vector2(-1.75, -12)
-shape = SubResource("RectangleShape2D_ucve2")
-
 [node name="to basement_1" type="Area2D" parent="."]
 position = Vector2(851, 255)
 
@@ -12010,5 +12001,9 @@ shape = SubResource("RectangleShape2D_kccvh")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
-[connection signal="body_entered" from="house1_exit" to="." method="_on_house_1_exit_body_entered"]
+[node name="Door" parent="." instance=ExtResource("22_isnup")]
+position = Vector2(737, 611)
+next_change_scene = "res://Scenes/map.tscn"
+next_scene_pos = Vector2(1681, 452)
+
 [connection signal="body_entered" from="to basement_1" to="." method="_on_to_basement_1_body_entered"]
