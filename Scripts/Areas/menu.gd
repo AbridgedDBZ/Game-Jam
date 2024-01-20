@@ -9,4 +9,3 @@ func _on_options_pressed():
 
 func _on_quit_pressed():
 	pass # Replace with function body.
-	
