@@ -22,7 +22,7 @@ buses/default_bus_layout=""
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
-globala="*res://globala.gd"
+globala="*res://Scripts/UI/globala.gd"
 
 [editor_plugins]
 
@@ -100,6 +100,10 @@ attack={
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":2,"pressure":0.0,"pressed":true,"script":null)
 ]
 }
+
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://Scenes/First_scene.dialogue")
 
 [layer_names]
 
