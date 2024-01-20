@@ -161,7 +161,7 @@ sprite_frames = SubResource("SpriteFrames_5luco")
 animation = &"back_walk"
 autoplay = "front_idle"
 frame_progress = 0.173052
-offset = Vector2(0, -15)
+offset = Vector2(0, -16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -6)
@@ -169,7 +169,7 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_r5uib")
 
 [node name="map_cam" type="Camera2D" parent="."]
-position = Vector2(0, -6)
+position = Vector2(0, -15)
 zoom = Vector2(3, 3)
 position_smoothing_speed = 10.0
 drag_left_margin = 0.0

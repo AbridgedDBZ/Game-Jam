@@ -11986,7 +11986,7 @@ layer_7/name = "kitchen2"
 layer_7/tile_data = PackedInt32Array(655375, 983048, 11, 327709, 1310728, 13, 262173, 1376264, 9, 655365, 786440, 8, 131082, 1441800, 11, 131083, 1114120, 11, 131078, 786440, 11, 458764, 851976, 12, 393230, 720904, 12, 458772, 393224, 13, 262166, 393224, 12, 524310, 786440, 11)
 
 [node name="Mummy" parent="." instance=ExtResource("21_47f5s")]
-position = Vector2(171, 139)
+position = Vector2(559, 330)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 

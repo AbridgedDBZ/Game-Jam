@@ -1,12 +1,17 @@
 extends CharacterBody2D
 
 @export var speed = 150
+@onready var tilemap = $"../TileMap"
 
 var current_dir = "none"
+ 
+var tiles = []
 
 func _ready():
 	$Sprite2D.play("front_idle")
-	
+	if globala.next_scene_position != Vector2(0,0):
+		position = globala.next_scene_position
+
 func player():
 	pass
 
@@ -67,3 +72,10 @@ func play_anim(movement):
 			anim.play("back_walk")
 		elif movement == 0:
 			anim.play("back_idle")
+
+
+func _on_area_2d_body_entered(body):
+	pass
+
+func _on_area_2d_body_exited(body):
+	pass 
