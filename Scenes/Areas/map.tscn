@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c2kvf6sfxhsbk" path="res://Art/Houses Demo/Exterrior/floor_and_deoratives.png" id="6_km0lj"]
 [ext_resource type="Texture2D" uid="uid://bjo5ubdnsbb8h" path="res://Art/Houses Demo/Exterrior/ready_to_use_houses.png" id="7_0psr7"]
 [ext_resource type="PackedScene" uid="uid://ccrsalhhu8ug5" path="res://Scenes/Sprites/mummy.tscn" id="8_pks7f"]
-[ext_resource type="PackedScene" uid="uid://bakyoalvmxq6" path="res://Scenes/door.tscn" id="9_l52h3"]
+[ext_resource type="PackedScene" uid="uid://bakyoalvmxq6" path="res://Scenes/Reuse/door.tscn" id="9_l52h3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_27lu1"]
 texture = ExtResource("1_114hn")
@@ -3431,6 +3431,7 @@ next_change_scene = "res://Scenes/Areas/cave_road.tscn"
 next_scene_pos = Vector2(442, 1442)
 
 [node name="Boundaries" type="StaticBody2D" parent="."]
+visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Boundaries"]
 position = Vector2(0, -1)

@@ -1,0 +1,76 @@
+[gd_scene load_steps=7 format=3 uid="uid://14y672px7ddk"]
+
+[ext_resource type="Script" path="res://Scripts/UI/enemy.gd" id="1_61u7t"]
+[ext_resource type="Texture2D" uid="uid://dc84r8chr10mm" path="res://Art/NPC/images/Characters/Civilian1(black)_Faint.png" id="2_n8v0k"]
+
+[sub_resource type="Curve2D" id="Curve2D_x28pv"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -42, 0, -9.36917, 0, 9.36917, 0, 103, -1, 0, 0, 0, 0, -43, -1)
+}
+point_count = 3
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4f50m"]
+atlas = ExtResource("2_n8v0k")
+region = Rect2(0, 0, 52, 52)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vrqj8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4f50m")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Curve2D" id="Curve2D_c5jqy"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -42, 0, 0, 0, 0, 0, 75, -1, 0, 0, 0, 0, -43, -1)
+}
+point_count = 3
+
+[node name="test_scene" type="Node2D"]
+
+[node name="enemy" type="Node2D" parent="."]
+position = Vector2(305, 127)
+script = ExtResource("1_61u7t")
+speed = 50
+metadata/_edit_group_ = true
+
+[node name="Path2D" type="Path2D" parent="enemy"]
+curve = SubResource("Curve2D_x28pv")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="enemy/Path2D"]
+position = Vector2(-42, 0)
+rotation = -0.0085468
+rotates = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="enemy/Path2D/PathFollow2D"]
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_vrqj8")
+
+[node name="_Timer_143963" type="Timer" parent="enemy/Path2D/PathFollow2D"]
+wait_time = 0.2
+one_shot = true
+
+[node name="enemy2" type="Node2D" parent="."]
+position = Vector2(324, 219)
+script = ExtResource("1_61u7t")
+metadata/_edit_group_ = true
+
+[node name="Path2D" type="Path2D" parent="enemy2"]
+curve = SubResource("Curve2D_c5jqy")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="enemy2/Path2D"]
+position = Vector2(-42, 0)
+rotation = -0.0085468
+rotates = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="enemy2/Path2D/PathFollow2D"]
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_vrqj8")
+
+[node name="_Timer_143963" type="Timer" parent="enemy2/Path2D/PathFollow2D"]
+wait_time = 0.2
+one_shot = true

@@ -1,11 +1,18 @@
-[gd_scene load_steps=21 format=3 uid="uid://h6eh5n7xsfw4"]
+[gd_scene load_steps=45 format=3 uid="uid://h6eh5n7xsfw4"]
 
 [ext_resource type="Texture2D" uid="uid://g4ygl624nnny" path="res://Art/seasonal sample (summer).png" id="1_08yft"]
+[ext_resource type="Script" path="res://Scenes/Areas/cave.gd" id="1_yekmm"]
 [ext_resource type="Texture2D" uid="uid://gtdig76c3vd6" path="res://Art/Houses Demo/_PNG/Interriors/FL_Houses_int_sidesOfTheHouses.png" id="2_aqudc"]
-[ext_resource type="PackedScene" uid="uid://ccrsalhhu8ug5" path="res://Scenes/Sprites/mummy.tscn" id="3_h4qm6"]
-[ext_resource type="PackedScene" uid="uid://bakyoalvmxq6" path="res://Scenes/door.tscn" id="4_vnvrh"]
+[ext_resource type="Script" path="res://Scripts/Sprites/mummy.gd" id="4_opmso"]
+[ext_resource type="PackedScene" uid="uid://bakyoalvmxq6" path="res://Scenes/Reuse/door.tscn" id="4_vnvrh"]
+[ext_resource type="Texture2D" uid="uid://1urissqvx7uy" path="res://Art/Mummy clock/mummy boy W Cloak BFI-1.png" id="5_pimlr"]
 [ext_resource type="Texture2D" uid="uid://eys3mmdow6yo" path="res://Art/Houses Demo/_PNG/Interriors/Anim/FL_Houses_torch.png" id="5_xw1fg"]
-[ext_resource type="AudioStream" uid="uid://iqnnqhs2sp2b" path="res://Audio/caves-tibet.wav" id="6_0gsk5"]
+[ext_resource type="Texture2D" uid="uid://q8nn3tetr4sj" path="res://Art/Mummy clock/mummy boy W Cloak BFW-Sheet.png" id="6_wqqae"]
+[ext_resource type="Texture2D" uid="uid://de0jbucrnspdi" path="res://Art/Mummy clock/mummy boy W Cloak FFI-1.png" id="7_nglpt"]
+[ext_resource type="Texture2D" uid="uid://fhrxpgb0qlwv" path="res://Art/Mummy clock/mummy_boy_W_Cloak_FFW-Sheet.png" id="8_58ma2"]
+[ext_resource type="Texture2D" uid="uid://d1h27mft1rbjy" path="res://Art/Mummy clock/mummy boy W Cloak RFI-1.png" id="9_htx7y"]
+[ext_resource type="Texture2D" uid="uid://clh6nxdvvefip" path="res://Art/Mummy clock/mummy boy W Cloak RFW-Sheet.png" id="10_jvmpb"]
+[ext_resource type="AudioStream" uid="uid://b2q3ee88vyn6q" path="res://Audio/horror-story-woods.wav" id="13_udjl0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4xe7y"]
 texture = ExtResource("1_08yft")
@@ -2064,6 +2071,148 @@ texture = ExtResource("2_aqudc")
 sources/1 = SubResource("TileSetAtlasSource_4xe7y")
 sources/2 = SubResource("TileSetAtlasSource_hcqmi")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmvof"]
+atlas = ExtResource("5_pimlr")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxjtt"]
+atlas = ExtResource("6_wqqae")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d4uk2"]
+atlas = ExtResource("6_wqqae")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6fr5"]
+atlas = ExtResource("6_wqqae")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ca5io"]
+atlas = ExtResource("6_wqqae")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jy3w1"]
+atlas = ExtResource("7_nglpt")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3tk76"]
+atlas = ExtResource("8_58ma2")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lcoiw"]
+atlas = ExtResource("8_58ma2")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hd7rt"]
+atlas = ExtResource("8_58ma2")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ariqr"]
+atlas = ExtResource("8_58ma2")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m44wv"]
+atlas = ExtResource("9_htx7y")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xvsox"]
+atlas = ExtResource("10_jvmpb")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rqxu6"]
+atlas = ExtResource("10_jvmpb")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x4p5n"]
+atlas = ExtResource("10_jvmpb")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6as0i"]
+atlas = ExtResource("10_jvmpb")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5luco"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qmvof")
+}],
+"loop": true,
+"name": &"back_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nxjtt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d4uk2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o6fr5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ca5io")
+}],
+"loop": true,
+"name": &"back_walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jy3w1")
+}],
+"loop": true,
+"name": &"front_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3tk76")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lcoiw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hd7rt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ariqr")
+}],
+"loop": true,
+"name": &"front_walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m44wv")
+}],
+"loop": true,
+"name": &"side_idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xvsox")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rqxu6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x4p5n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6as0i")
+}],
+"loop": true,
+"name": &"side_walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r5uib"]
+radius = 5.0
+height = 14.0
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_1u830"]
 atlas = ExtResource("5_xw1fg")
 region = Rect2(0, 0, 32, 64)
@@ -2139,6 +2288,7 @@ fill_from = Vector2(0.5, 0.5)
 
 [node name="cave" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_yekmm")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -2155,8 +2305,32 @@ layer_2/tile_data = PackedInt32Array(851992, 524289, 0, 851993, 458753, 0, 85199
 layer_3/name = "walls 2"
 layer_3/tile_data = PackedInt32Array(-196578, 393217, 3, -196589, 589825, 3, -131053, 589825, 4, -65517, 589825, 5, 19, 589825, 6, -196588, 458753, 4, -131052, 458753, 5, -65516, 458753, 6, -196587, 524289, 4, -131051, 458753, 6, -65515, 458753, 5, -196586, 524289, 4, -131050, 524289, 6, -65514, 524289, 5, -196585, 458753, 4, -131049, 458753, 5, -65513, 458753, 6, -196584, 524289, 4, -131048, 524289, 5, -65512, 524289, 6, -196583, 524289, 4, -131047, 524289, 5, -65511, 458753, 6, -196582, 524289, 4, -131046, 524289, 5, -65510, 524289, 6, -196581, 524289, 4, -131045, 524289, 5, -65509, 458753, 5, -196580, 524289, 4, -131044, 458753, 6, -65508, 524289, 6, -131042, 393217, 4, -131041, 458753, 4, 20, 458753, 7, 21, 524289, 7, 22, 458753, 7, 23, 524289, 7, 24, 458753, 7, 25, 524289, 7, 26, 458753, 7, 27, 458753, 7, 28, 524289, 7, -65506, 393217, 5, 30, 393217, 6, 65566, 393217, 7, -196579, 524289, 4, -131043, 524289, 5, -65507, 524289, 6, 29, 524289, 7, -65505, 458753, 5, 31, 458753, 6, 65567, 458753, 7, -131040, 458753, 4, -65504, 458753, 5, 32, 458753, 6, 65568, 458753, 7, -65503, 393217, 4, 33, 393217, 5, 65569, 393217, 6, 131105, 393217, 7, -131039, 393217, 3, -65502, 393217, 3, 34, 327681, 2, 65570, 327681, 2, 131106, 327681, 2, 196642, 327681, 2, 262178, 327681, 2, 327714, 327681, 2, -131054, 589825, 3, -65518, 589825, 4, 18, 589825, 5, 65554, 589825, 6, 131090, 589825, 7, 65555, 589825, 7, -65519, 589825, 3, 17, 655361, 2, 65553, 655361, 2, 131089, 655361, 2, 196625, 655361, 2, 262161, 655361, 2, 327697, 655361, 2, 131091, 589825, 3, 196627, 589825, 4, 262163, 589825, 6, 327699, 589825, 7, 65556, 589825, 3, 131092, 589825, 4, 196628, 589825, 6, 262164, 589825, 7, 65557, 524289, 4, 131093, 524289, 5, 196629, 524289, 7, 65558, 524289, 4, 131094, 458753, 5, 196630, 458753, 7, 65559, 458753, 4, 131095, 524289, 6, 196631, 524289, 7, 65560, 524289, 4, 131096, 524289, 5, 196632, 458753, 7, 65561, 524289, 4, 131097, 458753, 6, 196633, 524289, 7, 65562, 524289, 4, 131098, 524289, 5, 196634, 458753, 7, 65563, 524289, 4, 131099, 524289, 6, 196635, 524289, 7, 65564, 524289, 4, 131100, 524289, 5, 196636, 524289, 7, 65565, 393217, 3, 131101, 393217, 4, 196637, 393217, 5, 262173, 393217, 7, 131102, 524289, 4, 196638, 524289, 6, 262174, 524289, 7, 131103, 458753, 4, 196639, 458753, 6, 262175, 458753, 7, 131104, 393217, 3, 196640, 393217, 4, 262176, 393217, 6, 327712, 393217, 7, 196622, 2424834, 23, 262158, 2424834, 24, 327694, 2424834, 25, 393230, 2424834, 26, 196623, 2490370, 23, 262159, 2490370, 24, 327695, 2490370, 25, 393231, 2490370, 26, 196644, 2424834, 23, 262180, 2424834, 24, 327716, 2424834, 25, 393252, 2424834, 26, 196645, 2490370, 23, 262181, 2490370, 24, 327717, 2490370, 25, 393253, 2490370, 26)
 
-[node name="Mummy" parent="." instance=ExtResource("3_h4qm6")]
-position = Vector2(426, 204)
+[node name="Mummy" type="CharacterBody2D" parent="." groups=["Player"]]
+y_sort_enabled = true
+position = Vector2(400, 80)
+script = ExtResource("4_opmso")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Mummy"]
+position = Vector2(0, -2)
+scale = Vector2(1.01563, 0.960938)
+sprite_frames = SubResource("SpriteFrames_5luco")
+animation = &"back_walk"
+autoplay = "back_walk"
+offset = Vector2(0, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mummy"]
+position = Vector2(0, -6)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_r5uib")
+
+[node name="map_cam" type="Camera2D" parent="Mummy"]
+position = Vector2(0, -15)
+zoom = Vector2(3, 3)
+position_smoothing_speed = 10.0
+drag_left_margin = 0.0
+drag_top_margin = 0.0
+drag_right_margin = 0.0
+drag_bottom_margin = 0.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-6, -18)
@@ -2254,8 +2428,8 @@ energy = 0.3
 blend_mode = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_0gsk5")
-pitch_scale = 0.8
+stream = ExtResource("13_udjl0")
+volume_db = -8.5
+pitch_scale = 0.62
 autoplay = true
 mix_target = 1
-bus = &"Music"

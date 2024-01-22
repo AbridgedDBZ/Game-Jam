@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://bkffh3gcy0pdp" path="res://Art/Houses Demo/_PNG/Interriors/Furnitures/FL_Houses_int_FurnituresC.png" id="19_s141k"]
 [ext_resource type="Texture2D" uid="uid://c10a0g4m35nd8" path="res://Art/Houses Demo/_PNG/Interriors/Furnitures/FL_Houses_int_small_objects.png" id="20_rt10c"]
 [ext_resource type="PackedScene" uid="uid://ccrsalhhu8ug5" path="res://Scenes/Sprites/mummy.tscn" id="21_6rlq1"]
-[ext_resource type="PackedScene" uid="uid://bakyoalvmxq6" path="res://Scenes/door.tscn" id="21_ryjkt"]
+[ext_resource type="PackedScene" uid="uid://bakyoalvmxq6" path="res://Scenes/Reuse/door.tscn" id="21_ryjkt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_47yjg"]
 texture = ExtResource("2_bry33")
