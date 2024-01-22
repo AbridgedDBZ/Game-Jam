@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://dcahqgrnlhqmd"]
+
+[ext_resource type="Script" path="res://Scripts/UI/enemy.gd" id="1_swq15"]
+[ext_resource type="Texture2D" uid="uid://dc84r8chr10mm" path="res://Art/NPC/images/Characters/Civilian1(black)_Faint.png" id="2_xy8km"]
+
+[sub_resource type="Curve2D" id="Curve2D_c5jqy"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -42, 0, 0, 0, 0, 0, 75, -1, 0, 0, 0, 0, -43, -1)
+}
+point_count = 3
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4f50m"]
+atlas = ExtResource("2_xy8km")
+region = Rect2(0, 0, 52, 52)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vrqj8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4f50m")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="enemy" type="Node2D"]
+script = ExtResource("1_swq15")
+metadata/_edit_group_ = true
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_c5jqy")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(-42, 0)
+rotation = -0.0085468
+rotates = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Path2D/PathFollow2D"]
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_vrqj8")
+
+[node name="_Timer_143963" type="Timer" parent="Path2D/PathFollow2D"]
+wait_time = 0.2
+one_shot = true
