@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Game Jam 1"
-run/main_scene="res://Scenes/Areas/map.tscn"
+run/main_scene="res://Scenes/Areas/church_road.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://Art/icon.svg"
 

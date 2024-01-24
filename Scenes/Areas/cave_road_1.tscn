@@ -1,14 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://de76a0guqgepy"]
+[gd_scene load_steps=22 format=3 uid="uid://dpf3mfau6mhwx"]
 
-[ext_resource type="Texture2D" uid="uid://g4ygl624nnny" path="res://Art/seasonal sample (summer).png" id="1_hic4e"]
-[ext_resource type="Texture2D" uid="uid://nrih8u8nsgav" path="res://Art/Altered/Watter Ridges-export.png" id="2_3mt10"]
-[ext_resource type="Texture2D" uid="uid://p1wa8d26u8p3" path="res://Art/Houses Demo/_PNG/Exterriors/FL_Houses_ext_terrain_floors.png" id="3_447ii"]
-[ext_resource type="PackedScene" uid="uid://ccrsalhhu8ug5" path="res://Scenes/Sprites/mummy.tscn" id="4_3hqgc"]
-[ext_resource type="PackedScene" uid="uid://bakyoalvmxq6" path="res://Scenes/Reuse/door.tscn" id="5_347cn"]
-[ext_resource type="AudioStream" uid="uid://w8ycvcw01g63" path="res://Audio/time-stands-still.wav" id="6_4op4l"]
+[ext_resource type="Texture2D" uid="uid://g4ygl624nnny" path="res://Art/seasonal sample (summer).png" id="1_uxywi"]
+[ext_resource type="Texture2D" uid="uid://nrih8u8nsgav" path="res://Art/Altered/Watter Ridges-export.png" id="2_op44g"]
+[ext_resource type="Texture2D" uid="uid://p1wa8d26u8p3" path="res://Art/Houses Demo/_PNG/Exterriors/FL_Houses_ext_terrain_floors.png" id="3_b4dii"]
+[ext_resource type="PackedScene" uid="uid://bakyoalvmxq6" path="res://Scenes/Reuse/door.tscn" id="5_5syfe"]
+[ext_resource type="Script" path="res://Scripts/UI/enemy.gd" id="6_behh5"]
+[ext_resource type="Texture2D" uid="uid://dsxiaay0d4h1x" path="res://Art/NPC/images/Characters/Civilian1(black)_Move.png" id="7_cudcj"]
+[ext_resource type="Texture2D" uid="uid://dfepqw6763dad" path="res://Art/NPC/images/Characters/Civilian2(black)_Move.png" id="8_k5wud"]
+[ext_resource type="Script" path="res://Scripts/Areas/dialogue start.gd" id="9_4qfdv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n8gsr"]
-texture = ExtResource("1_hic4e")
+texture = ExtResource("1_uxywi")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -208,7 +210,7 @@ texture = ExtResource("1_hic4e")
 11:0/0/y_sort_origin = -8
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t02ex"]
-texture = ExtResource("2_3mt10")
+texture = ExtResource("2_op44g")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -434,7 +436,7 @@ texture = ExtResource("2_3mt10")
 15:15/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k5oe2"]
-texture = ExtResource("3_447ii")
+texture = ExtResource("3_b4dii")
 6:0/0 = 0
 7:0/0 = 0
 8:0/0 = 0
@@ -1695,6 +1697,106 @@ sources/0 = SubResource("TileSetAtlasSource_n8gsr")
 sources/1 = SubResource("TileSetAtlasSource_t02ex")
 sources/2 = SubResource("TileSetAtlasSource_k5oe2")
 
+[sub_resource type="Curve2D" id="Curve2D_tkk42"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -24, 2, 0, 0, 0, 0, 232, 2, 0, 0, 0, 0, 232, -426)
+}
+point_count = 3
+
+[sub_resource type="Animation" id="Animation_3h6kd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [16]
+}
+
+[sub_resource type="Animation" id="Animation_envec"]
+resource_name = "side_walk"
+length = 3.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.1, 2.4, 2.7, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [8, 9, 10, 11, 16, 17, 18, 19, 16, 17, 18]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:progress")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.2, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 253.0, 684.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x540l"]
+_data = {
+"RESET": SubResource("Animation_3h6kd"),
+"side_walk": SubResource("Animation_envec")
+}
+
+[sub_resource type="Curve2D" id="Curve2D_c5jqy"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -54, 1, 0, 0, 0, 0, 187, 1, 0, 0, 0, 0, 186, -376, 0, 0, 0, 0, 117, -377)
+}
+point_count = 4
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kffd1"]
+radius = 17.0294
+
+[sub_resource type="Animation" id="Animation_yc0w6"]
+resource_name = "side_walk"
+length = 50.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.1, 2.4, 2.7, 3, 27, 27.3, 27.6, 27.9, 28.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [8, 9, 10, 11, 16, 17, 18, 19, 17, 16, 18, 24, 25, 26, 27, 24]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:progress")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.2, 2.4, 3, 27, 28.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 230.0, 460.0, 618.0, 618.0, 684.2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xubs2"]
+_data = {
+"side_walk": SubResource("Animation_yc0w6")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rdl8x"]
+size = Vector2(33, 21)
+
 [node name="cave_road" type="Node2D"]
 y_sort_enabled = true
 
@@ -1712,26 +1814,98 @@ layer_3/name = "ysort"
 layer_3/y_sort_enabled = true
 layer_3/tile_data = PackedInt32Array(3407907, 720896, 0, 2621480, 720896, 0, 2424849, 720896, 0, 3866644, 720896, 0, 3604491, 720896, 0, 4063247, 720896, 0, 4325397, 720896, 0, 4194339, 720896, 0, 3866657, 720896, 0, 3604520, 720896, 0, 2883619, 720896, 0, 3080232, 720896, 0, 2949164, 720896, 0, 3342382, 720896, 0, 4128811, 720896, 0, 4718628, 720896, 0, 4456490, 720896, 0, 5177378, 720896, 0, 4980777, 720896, 0, 4784175, 720896, 0, 5439529, 720896, 0, 5701667, 720896, 0, 5832744, 720896, 0, 5373989, 720896, 0, 5177393, 720896, 0, 5767187, 720896, 0, 5308430, 720896, 0, 5111827, 720896, 0, 4653069, 720896, 0, 4915221, 720896, 0, 4784144, 720896, 0, 4194313, 720896, 0, 2162709, 720896, 0, 2097162, 720896, 0, 1966095, 720896, 0, 2293763, 720896, 0, 2359306, 720896, 0, 2228258, 720896, 0, 1638435, 720896, 0, 1376296, 720896, 0, 983083, 720896, 0, 1048612, 720896, 0, 1048592, 720896, 0, 983043, 720896, 0, 1179655, 720896, 0, 1507342, 720896, 0, 1638404, 720896, 0, 1441801, 720896, 0, 1835050, 720896, 0, 2228269, 720896, 0, 2555952, 720896, 0, 2621488, 720896, 0, 2949171, 720896, 0, 3473459, 720896, 0, 3735598, 720896, 0, 4849672, 720896, 0, 5242884, 720896, 0, 5636102, 720896, 0, 5701645, 720896, 0, 5308426, 720896, 0, 4325380, 720896, 0, 4456464, 720896, 0, 4653059, 720896, 0, 3801094, 720896, 0, 3670032, 720896, 0, 4194353, 720896, 0, 3932213, 720896, 0, 3342394, 720896, 0, 2687032, 720896, 0, 2097204, 720896, 0, 2031674, 720896, 0, 4259899, 720896, 0, 4587574, 720896, 0, 4915257, 720896, 0, 5701680, 720896, 0, 5832759, 720896, 0, 5439546, 720896, 0, 5374005, 720896, 0, 6225955, 720896, 0, 6160424, 720896, 0, 6094896, 720896, 0, 6225965, 720896, 0, 6029370, 720896, 0, 6291516, 720896, 0, 5636157, 720896, 0, 5570612, 720896, 0, 5242925, 720896, 0, 4718644, 720896, 0, 4390958, 720896, 0, 3670075, 720896, 0, 3997735, 720896, 0, 2424871, 720896, 0, 1638448, 720896, 0, 1310765, 720896, 0, 1441845, 720896, 0, 1114171, 720896, 0, 786480, 720896, 0, 1572923, 720896, 0, 655365, 720896, 0, 6225976, 720896, 0, 852021, 720896, 0)
 
-[node name="Mummy" parent="." instance=ExtResource("4_3hqgc")]
-position = Vector2(442, 290)
-
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(473, 1451, 832, 1451, 832, 128, 641, 129, 641, 165, 631, 171, 622, 173, 616, 185, 605, 191, 575, 190, 566, 183, 561, 172, 543, 173, 537, 185, 526, 190, 520, 202, 510, 206, 505, 217, 495, 223, 460, 221, 460, 189, 424, 189, 424, 234, 410, 239, 392, 235, 376, 239, 361, 234, 346, 239, 330, 234, 316, 238, 305, 221, 286, 215, 286, 129, 160, 128, 160, 1451, 407, 1451, 407, 1452, 159, 1452, 159, 127, 833, 127, 833, 1452, 473, 1452)
 
-[node name="to_map" parent="." instance=ExtResource("5_347cn")]
+[node name="to_map" parent="." instance=ExtResource("5_5syfe")]
 position = Vector2(439, 1503)
 scale = Vector2(5, 5)
-next_change_scene = "res://Scenes/Areas/cave_road_1.tscn"
+next_change_scene = "res://Scenes/Areas/map.tscn"
+next_scene_pos = Vector2(-1300, 144)
 
-[node name="Door" parent="." instance=ExtResource("5_347cn")]
-position = Vector2(442, 207)
-scale = Vector2(1.75, 1.75)
-next_change_scene = "res://Scenes/Areas/cave.tscn"
-next_scene_pos = Vector2(426, 204)
+[node name="Greb" type="Node2D" parent="."]
+position = Vector2(230, 704)
+script = ExtResource("6_behh5")
+metadata/_edit_group_ = true
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_4op4l")
-pitch_scale = 0.8
-autoplay = true
+[node name="Path2D" type="Path2D" parent="Greb"]
+curve = SubResource("Curve2D_tkk42")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Greb/Path2D"]
+position = Vector2(-24, 2)
+rotation = -0.0085468
+rotates = false
+loop = false
+
+[node name="AnimatedSprite2D" type="Sprite2D" parent="Greb/Path2D/PathFollow2D"]
+scale = Vector2(3, 3)
+texture = ExtResource("7_cudcj")
+hframes = 4
+vframes = 8
+frame = 16
+
+[node name="_Timer_143963" type="Timer" parent="Greb/Path2D/PathFollow2D"]
+wait_time = 0.2
+one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Greb/Path2D/PathFollow2D"]
+libraries = {
+"": SubResource("AnimationLibrary_x540l")
+}
+autoplay = "side_walk"
+
+[node name="Nuttella" type="Node2D" parent="."]
+position = Vector2(229, 659)
+script = ExtResource("6_behh5")
+speed = 80
+metadata/_edit_group_ = true
+
+[node name="Path2D" type="Path2D" parent="Nuttella"]
+curve = SubResource("Curve2D_c5jqy")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Nuttella/Path2D"]
+position = Vector2(119.794, -376.96)
+rotation = -0.0085468
+progress = 684.2
+rotates = false
+loop = false
+
+[node name="AnimatedSprite2D" type="Sprite2D" parent="Nuttella/Path2D/PathFollow2D"]
+scale = Vector2(3, 3)
+texture = ExtResource("8_k5wud")
+hframes = 4
+vframes = 8
+frame = 24
+
+[node name="Camera2D" type="Camera2D" parent="Nuttella/Path2D/PathFollow2D/AnimatedSprite2D"]
+position = Vector2(0.67234, -0.660936)
+rotation = 0.0085468
+scale = Vector2(0.333333, 0.333333)
+zoom = Vector2(2.5, 2.5)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Nuttella/Path2D/PathFollow2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nuttella/Path2D/PathFollow2D/CharacterBody2D"]
+shape = SubResource("CircleShape2D_kffd1")
+
+[node name="_Timer_143963" type="Timer" parent="Nuttella/Path2D/PathFollow2D"]
+wait_time = 0.2
+one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Nuttella/Path2D/PathFollow2D"]
+libraries = {
+"": SubResource("AnimationLibrary_xubs2")
+}
+autoplay = "side_walk"
+
+[node name="Dialogue start" type="Area2D" parent="."]
+script = ExtResource("9_4qfdv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dialogue start"]
+position = Vector2(414, 279)
+shape = SubResource("RectangleShape2D_rdl8x")
+
+[connection signal="body_entered" from="Dialogue start" to="Dialogue start" method="_on_body_entered"]
+[connection signal="body_exited" from="Dialogue start" to="Dialogue start" method="_on_body_exited"]

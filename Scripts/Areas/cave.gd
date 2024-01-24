@@ -5,9 +5,7 @@ extends Node2D
 func _ready():
 	DialogueManager.show_example_dialogue_balloon(load("res://Scenes/dialogue/First_scene.dialogue"), "Cave_1")
 	return
-	DialogueManager.show_example_dialogue_balloon(load("res://Scenes/dialogue/second_scene.dialogue"), "Cave_2")
-	return
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass

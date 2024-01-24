@@ -1,13 +1,17 @@
 ~ Cave_2
 
-Greb: Finally.. *huff* we *huff* arrived!
-Nuttela: Why couldn't they *huff* arrange a carriage or something?
-Greb: They said we didn't have enough TIME to prepare it but..
-Greb: I call rainbowshit on that!
-Nuttela: *she secretly thought 'Brother must be really pissed for him to shout such vulgar word.'
-Greb: Now...
-Greb: Let's finish this job so we can return back to the church!
-Nuttela: Bro-brother! Th- the cave!!
-Nuttela: It's… open!?
+Greb: "Finally... 
+	[speed=0.5]*huff* [wait=0.5] we.. 
+	[speed=0.5]*huff* [wait=0.5] arrived!"
+Nuttela: “Why couldn't they..
+	[speed=0.5] *huff* [wait=0.5] arrange a carriage or something?”
+Greb: "They said we didn't have enough TIME to prepare it but..”
+Greb: ”I call rainbowshit on that!.”
 
-=> END
+[speed=.5] Bewildered at his comment she thought
+Nuttela: Brother must be really pissed for him to shout such vulgar word. 
+Greb: “Now…”
+Greb: “Let's finish this job so we can return back to our post.”
+Nuttela: “Bro-brother! Th- the cave!!”
+Nuttela: “It's… open!?”
+=> END!
