@@ -1,8 +1,7 @@
 ~ start
-[speed=0.5]
-	Nuttela: "Bro-brother? Ar-are we there ye-yet?" 
-[speed=0.5][wait=1]
-	A bit annoyed, he still answered 
-Greb: "We will get there when we get there! You asking that won't make it any faster." He said trying to maintain a hushed tone.
 
+[speed=0.5] Nuttela nervously walked alongside her twin brother Greb whom was older than her by a mere few minutes. Soon it becomes apparent that she is scared, and in a trembling voice she asks - 
+Nuttela: "Bro-brother? Ar-are we there ye-yet?"  
+[speed=0.5][wait=1] A bit annoyed at her question, he reluctantly answered - 
+Greb: "We will get there when we get there! You asking that won't make it any faster." He replied, trying to maintain a hushed tone. 
 => END

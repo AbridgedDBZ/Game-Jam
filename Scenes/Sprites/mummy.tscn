@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://ccrsalhhu8ug5"]
+[gd_scene load_steps=26 format=3 uid="uid://ccrsalhhu8ug5"]
 
 [ext_resource type="Script" path="res://Scripts/Sprites/mummy.gd" id="1_kvpo0"]
 [ext_resource type="Texture2D" uid="uid://1urissqvx7uy" path="res://Art/Mummy clock/mummy boy W Cloak BFI-1.png" id="2_13cxj"]
@@ -7,6 +7,13 @@
 [ext_resource type="Texture2D" uid="uid://fhrxpgb0qlwv" path="res://Art/Mummy clock/mummy_boy_W_Cloak_FFW-Sheet.png" id="4_cd5c3"]
 [ext_resource type="Texture2D" uid="uid://d1h27mft1rbjy" path="res://Art/Mummy clock/mummy boy W Cloak RFI-1.png" id="4_ssjiv"]
 [ext_resource type="Texture2D" uid="uid://clh6nxdvvefip" path="res://Art/Mummy clock/mummy boy W Cloak RFW-Sheet.png" id="7_fhsnx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r5uib"]
+radius = 5.0
+height = 14.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c4oa6"]
+size = Vector2(29, 27)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qmvof"]
 atlas = ExtResource("2_13cxj")
@@ -146,22 +153,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r5uib"]
-radius = 5.0
-height = 14.0
-
 [node name="Mummy" type="CharacterBody2D" groups=["Player"]]
 y_sort_enabled = true
 script = ExtResource("1_kvpo0")
-
-[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -2)
-scale = Vector2(1.01563, 0.960938)
-sprite_frames = SubResource("SpriteFrames_5luco")
-animation = &"back_walk"
-autoplay = "front_idle"
-frame_progress = 0.173052
-offset = Vector2(0, -16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -6)
@@ -184,3 +178,12 @@ collision_layer = 0
 collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Marker2D/ActionableFinder"]
+scale = Vector2(1.25, 1.25)
+shape = SubResource("RectangleShape2D_c4oa6")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.01563, 0.960938)
+sprite_frames = SubResource("SpriteFrames_5luco")
+animation = &"back_idle"
+autoplay = "front_idle"
+offset = Vector2(0, -16)

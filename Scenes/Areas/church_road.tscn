@@ -431,6 +431,6 @@ limit_right = 1805
 
 [node name="Door" parent="." instance=ExtResource("8_vxr8l")]
 position = Vector2(1720, 277)
-next_change_scene = "res://Scenes/Areas/cave_road.tscn"
+next_change_scene = "res://Scenes/Areas/cave.tscn"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
