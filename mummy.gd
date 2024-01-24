@@ -1,12 +1,12 @@
 extends CharacterBody2D
 
-@export var speed: int = 200
+@export var speed = 200
 
-var current_dir: String = "none"
+var current_dir = "none"
 
 func _ready():
 	$Sprite2D.play("front_idle")
-
+	
 func get_input():
 	var input_direction := Input.get_vector("left", "right", "up", "down")
 	
@@ -30,34 +30,35 @@ func get_input():
 		play_anim(0)
 		velocity.x = 0
 		velocity.y = 0
-
+	
 func _physics_process(delta):
 	get_input()
 	move_and_slide()
-
+	
 func play_anim(movement):
 	var anim = $Sprite2D
+	var dir = current_dir
 
-	if current_dir == "right":
+	if dir == "right":
 		anim.flip_h = false
 		if movement == 1:
 			anim.play("side_walk")
 		elif movement == 0:
 			anim.play("side_idle")
-	if current_dir == "left":
+	if dir == "left":
 		anim.flip_h = true
 		if movement == 1:
 			anim.play("side_walk")
 		elif movement == 0:
 			anim.play("side_idle")
 
-	if current_dir == "down":
+	if dir == "down":
 		anim.flip_h = true
 		if movement == 1:
 			anim.play("front_walk")
 		elif movement == 0:
 			anim.play("front_idle")
-	if current_dir == "up":
+	if dir == "up":
 		anim.flip_h = true
 		if movement == 1:
 			anim.play("back_walk")
