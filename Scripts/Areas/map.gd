@@ -1,7 +1,7 @@
 extends Node2D
 
 func _ready():
-	pass
+	get_tree().paused = false
 func _process(_delta):
 	pass
 

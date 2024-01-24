@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Game Jam 1"
-run/main_scene="res://Scenes/map.tscn"
+run/main_scene="res://Scenes/Areas/map.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://Art/icon.svg"
 
@@ -22,6 +22,20 @@ buses/default_bus_layout=""
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+globala="*res://Scripts/UI/globala.gd"
+
+[dialogue_manager]
+
+general/states=["globala"]
+general/wrap_lines=true
+general/new_with_template=false
+
+[display]
+
+window/size/viewport_width=960
+window/size/viewport_height=540
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [editor_plugins]
 
@@ -99,10 +113,26 @@ attack={
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":2,"pressure":0.0,"pressed":true,"script":null)
 ]
 }
+interact={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":0,"pressure":0.0,"pressed":true,"script":null)
+]
+}
+esc={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
+}
+
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://Scenes/dialogue/First_scene.dialogue", "res://Scenes/dialogue/second_scene.dialogue", "res://Scenes/dialogue/third_scene.dialogue", "res://Scenes/dialogue/fourth_scene.dialogue", "res://Scenes/dialogue/1st.dialogue")
 
 [layer_names]
 
 2d_render/layer_3="Start_battle"
+2d_physics/layer_5="Actionables"
 
 [rendering]
 

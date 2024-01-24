@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bt3ywbek4rgbl"]
+[gd_scene load_steps=26 format=3 uid="uid://bt3ywbek4rgbl"]
 
 [ext_resource type="Script" path="res://Scripts/Areas/map.gd" id="1_apav6"]
 [ext_resource type="Texture2D" uid="uid://bjo5ubdnsbb8h" path="res://Art/Houses Demo/Exterrior/ready_to_use_houses.png" id="2_3do4e"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dc8bob3lqjhly" path="res://Art/seasonal sample (autumn).png" id="6_qsu44"]
 [ext_resource type="Texture2D" uid="uid://ciljgnyjdqkpt" path="res://Art/seasonal sample (winter).png" id="7_mdyd6"]
 [ext_resource type="PackedScene" uid="uid://ccrsalhhu8ug5" path="res://Scenes/mummy.tscn" id="8_3gqaj"]
+[ext_resource type="PackedScene" uid="uid://dq4bjs7haengi" path="res://Scenes/pause_menu.tscn" id="12_yuye2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_27lu1"]
 texture = ExtResource("2_uvp87")
@@ -5140,6 +5141,11 @@ shape = SubResource("RectangleShape2D_uejnj")
 
 [node name="houseExitNode" type="Node2D" parent="."]
 position = Vector2(1682.26, 423.986)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pause Menu" parent="CanvasLayer" instance=ExtResource("12_yuye2")]
+visible = false
 
 [connection signal="body_entered" from="house1_transition_area" to="." method="_on_house_1_transition_area_body_entered"]
 [connection signal="body_entered" from="enter_mayors_house" to="." method="_on_enter_mayors_house_body_entered"]

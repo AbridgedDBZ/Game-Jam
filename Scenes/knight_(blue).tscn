@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bd7p4clqpj6jf"]
+
+[ext_resource type="Texture2D" uid="uid://bsd3fk8pl7u2o" path="res://Art/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_nxwal"]
+[ext_resource type="Script" path="res://Scenes/knight_(blue).gd" id="2_a2aiv"]
+
+[node name="Knight (Blue)" type="Sprite2D"]
+position = Vector2(-12, 2)
+texture = ExtResource("1_nxwal")
+hframes = 6
+vframes = 8
+script = ExtResource("2_a2aiv")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_right = 4.0
+offset_bottom = 27.0
+
+[node name="focus" type="Sprite2D" parent="."]
+visible = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

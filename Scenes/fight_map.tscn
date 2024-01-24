@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://gawegtq11j7c"]
+
+[ext_resource type="PackedScene" uid="uid://cyeaot7pyddfp" path="res://Scenes/fight_scene_test.tscn" id="1_7xmh4"]
+[ext_resource type="PackedScene" uid="uid://ccrsalhhu8ug5" path="res://Scenes/mummy.tscn" id="2_nc3l8"]
+
+[node name="Fight Scene" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Player Group" parent="." instance=ExtResource("1_7xmh4")]
+
+[node name="Mummy" parent="." instance=ExtResource("2_nc3l8")]
+position = Vector2(710, 172)
+scale = Vector2(3, 3)

@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyeaot7pyddfp"]
+
+[ext_resource type="Script" path="res://Scenes/fight_scene_test.gd" id="1_ogrc3"]
+[ext_resource type="PackedScene" uid="uid://bd7p4clqpj6jf" path="res://Scenes/knight_(blue).tscn" id="1_q5ldk"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u4rpy"]
+load_path = "res://.godot/imported/Warrior_Blue.png-c615e08c72e2052370df78007e037d39.ctex"
+
+[node name="Player Group" type="Node2D"]
+script = ExtResource("1_ogrc3")
+
+[node name="Knight (Blue)" parent="." instance=ExtResource("1_q5ldk")]
+position = Vector2(329, 158)
+texture = SubResource("CompressedTexture2D_u4rpy")
+
+[node name="Knight (Blue)2" parent="." instance=ExtResource("1_q5ldk")]
+position = Vector2(329, 17)
+
+[node name="Knight (Blue)3" parent="." instance=ExtResource("1_q5ldk")]
+position = Vector2(337, 295)
+
+[editable path="Knight (Blue)"]
