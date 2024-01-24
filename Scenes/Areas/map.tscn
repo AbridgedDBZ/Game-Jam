@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bt3ywbek4rgbl"]
+[gd_scene load_steps=19 format=3 uid="uid://bt3ywbek4rgbl"]
 
 [ext_resource type="Texture2D" uid="uid://b4libk687dpne" path="res://Art/Houses Demo/_PNG/FL_Houses_Houses.png" id="1_114hn"]
 [ext_resource type="Texture2D" uid="uid://bo6mre8u2550j" path="res://Art/Houses Demo/_PNG/FL_Houses_decoratives.png" id="2_284g0"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bjo5ubdnsbb8h" path="res://Art/Houses Demo/Exterrior/ready_to_use_houses.png" id="7_0psr7"]
 [ext_resource type="PackedScene" uid="uid://ccrsalhhu8ug5" path="res://Scenes/Sprites/mummy.tscn" id="8_pks7f"]
 [ext_resource type="PackedScene" uid="uid://bakyoalvmxq6" path="res://Scenes/Reuse/door.tscn" id="9_l52h3"]
+[ext_resource type="PackedScene" uid="uid://dr1jj3267dc6m" path="res://Scenes/Use later/pause_menu.tscn" id="10_7q02e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_27lu1"]
 texture = ExtResource("1_114hn")
@@ -3437,3 +3438,8 @@ polygon = PackedVector2Array(-1007, 96, -1000, 89, -1693, 94, -1694, 1392, -606,
 [node name="to_lex_house" parent="." instance=ExtResource("9_l52h3")]
 position = Vector2(-1382, 941)
 next_change_scene = "res://Scenes/Areas/lexs_house.tscn"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pause Menu" parent="CanvasLayer" instance=ExtResource("10_7q02e")]
+visible = false
