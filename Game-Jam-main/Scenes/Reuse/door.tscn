@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bakyoalvmxq6"]
+
+[ext_resource type="Script" path="res://Scripts/Areas/door.gd" id="1_lq164"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y1goc"]
+
+[node name="Door" type="Area2D"]
+script = ExtResource("1_lq164")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
+shape = SubResource("RectangleShape2D_y1goc")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
