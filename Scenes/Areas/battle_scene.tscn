@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://b781h70kl5yru"]
+
+[ext_resource type="PackedScene" uid="uid://d3q1d2lxd35vs" path="res://Scenes/Areas/enemy_group.tscn" id="1_3l5pw"]
+[ext_resource type="Texture2D" uid="uid://1sqhv0wglfca" path="res://Art/BG_FF2_09.png" id="1_7xutd"]
+[ext_resource type="PackedScene" uid="uid://bfs03j06iyp7p" path="res://Scenes/Areas/player_group.tscn" id="3_0qp2r"]
+
+[node name="Battle Scene" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -47.0
+offset_top = -26.0
+offset_right = 1137.0
+offset_bottom = 654.0
+texture = ExtResource("1_7xutd")
+stretch_mode = 4
+
+[node name="Enemy Group" parent="." instance=ExtResource("1_3l5pw")]
+position = Vector2(688, 207)
+
+[node name="player_group" parent="." instance=ExtResource("3_0qp2r")]
+position = Vector2(362, 227)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Choice" type="VBoxContainer" parent="CanvasLayer"]
+offset_left = 402.0
+offset_top = 348.0
+offset_right = 613.0
+offset_bottom = 489.0
+
+[node name="Attack" type="Button" parent="CanvasLayer/Choice"]
+layout_mode = 2
+text = "Attack"
+
+[node name="Defend" type="Button" parent="CanvasLayer/Choice"]
+layout_mode = 2
+text = "Defend"
+
+[node name="Run" type="Button" parent="CanvasLayer/Choice"]
+layout_mode = 2
+text = "Run"
