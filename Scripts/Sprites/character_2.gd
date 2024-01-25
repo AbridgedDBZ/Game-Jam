@@ -17,16 +17,12 @@ func _update_progress_bar():
 func _play_animation():
 	animation_player.play("hurt")
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
 func focus():
 	_focus.show()
 
 func unfocus():
 	_focus.hide()
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(_delta):
 	pass
 

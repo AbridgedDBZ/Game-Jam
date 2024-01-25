@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b781h70kl5yru"]
+[gd_scene load_steps=4 format=3 uid="uid://fkxae8gsvkbq"]
 
-[ext_resource type="PackedScene" uid="uid://d3q1d2lxd35vs" path="res://Scenes/Areas/enemy_group.tscn" id="1_3l5pw"]
+[ext_resource type="PackedScene" uid="uid://b2lwgofm28mqh" path="res://Scenes/Areas/enemy_group.tscn" id="1_3l5pw"]
 [ext_resource type="Texture2D" uid="uid://1sqhv0wglfca" path="res://Art/BG_FF2_09.png" id="1_7xutd"]
-[ext_resource type="PackedScene" uid="uid://bfs03j06iyp7p" path="res://Scenes/Areas/player_group.tscn" id="3_0qp2r"]
+[ext_resource type="PackedScene" uid="uid://bq4qg5fophg1n" path="res://Scenes/Areas/player_group.tscn" id="3_0qp2r"]
 
 [node name="Battle Scene" type="Node2D"]
 

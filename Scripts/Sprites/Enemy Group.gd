@@ -9,7 +9,7 @@ var is_battling: bool = false
 @onready var choice = $"../CanvasLayer/Choice"
 
 signal next_player
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
 	enemies = get_children()
 	for i in enemies.size():
@@ -17,7 +17,6 @@ func _ready():
 	enemy_size = enemies.size()
 	show_choice()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	if not choice.visible:
 		if Input.is_action_just_pressed("ui_up") and index > 0:
@@ -36,7 +35,7 @@ func _process(_delta):
 func _action(stack):
 	for i in stack:
 		enemies[i].take_damage(1)
-		await get_tree().create_timer(0.6).timeout
+		await get_tree().create_timer(1).timeout
 	action_queue.clear()
 	is_battling = false
 	show_choice()
@@ -57,7 +56,6 @@ func _reset_focus():
 func _start_choosing():
 	_reset_focus()
 	enemies[0].focus()
-
 
 func _on_attack_pressed():
 	choice.hide()

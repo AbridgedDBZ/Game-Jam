@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bfs03j06iyp7p"]
+[gd_scene load_steps=4 format=3 uid="uid://bq4qg5fophg1n"]
 
 [ext_resource type="Script" path="res://Scripts/UI/player_group.gd" id="1_lctq3"]
-[ext_resource type="PackedScene" uid="uid://bjabp5qy4u4lx" path="res://Scenes/Areas/character_2.tscn" id="1_rne55"]
+[ext_resource type="PackedScene" uid="uid://fae17jywxhcn" path="res://Scenes/Areas/character_2.tscn" id="1_rne55"]
 [ext_resource type="Texture2D" uid="uid://d1h27mft1rbjy" path="res://Art/Mummy clock/mummy boy W Cloak RFI-1.png" id="2_emmvw"]
 
 [node name="player_group" type="Node2D"]

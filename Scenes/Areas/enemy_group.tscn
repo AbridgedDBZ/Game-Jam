@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://d3q1d2lxd35vs"]
+[gd_scene load_steps=3 format=3 uid="uid://b2lwgofm28mqh"]
 
 [ext_resource type="Script" path="res://Scripts/Sprites/Enemy Group.gd" id="1_hiksc"]
-[ext_resource type="PackedScene" uid="uid://bjabp5qy4u4lx" path="res://Scenes/Areas/character_2.tscn" id="2_0rncw"]
+[ext_resource type="PackedScene" uid="uid://fae17jywxhcn" path="res://Scenes/Areas/character_2.tscn" id="2_0rncw"]
 
 [node name="Enemy Group" type="Node2D"]
 script = ExtResource("1_hiksc")

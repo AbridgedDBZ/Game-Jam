@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed = 150
+@export var speed: float = 150
 @onready var tilemap = $"../TileMap"
 
 var current_dir = "none"

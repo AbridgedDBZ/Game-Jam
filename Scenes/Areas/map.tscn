@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bjo5ubdnsbb8h" path="res://Art/Houses Demo/Exterrior/ready_to_use_houses.png" id="7_0psr7"]
 [ext_resource type="PackedScene" uid="uid://ccrsalhhu8ug5" path="res://Scenes/Sprites/mummy.tscn" id="8_pks7f"]
 [ext_resource type="PackedScene" uid="uid://bakyoalvmxq6" path="res://Scenes/Reuse/door.tscn" id="9_l52h3"]
-[ext_resource type="PackedScene" uid="uid://dr1jj3267dc6m" path="res://Scenes/Use later/pause_menu.tscn" id="10_7q02e"]
+[ext_resource type="PackedScene" path="res://Scenes/Use later/pause_menu.tscn" id="10_7q02e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_27lu1"]
 texture = ExtResource("1_114hn")

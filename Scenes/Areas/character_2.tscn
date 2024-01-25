@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bjabp5qy4u4lx"]
+[gd_scene load_steps=7 format=3 uid="uid://fae17jywxhcn"]
 
 [ext_resource type="Texture2D" uid="uid://dq50ehqv1wl88" path="res://Art/NPC/images/Characters/Ready_00 #32.png" id="1_8pgxd"]
 [ext_resource type="Script" path="res://Scripts/Sprites/character_2.gd" id="1_dlhul"]
