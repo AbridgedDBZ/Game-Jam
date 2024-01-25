@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://uxc0xpf0jed0" path="res://Audio/retro-video-game-theme-sewer-l.wav" id="7_a6v4j"]
 
 [node name="menu" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -28,10 +29,10 @@ expand_mode = 1
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 2
-offset_left = -2.0
-offset_top = 361.0
-offset_right = 326.0
-offset_bottom = 648.0
+offset_left = -15.0
+offset_top = 298.0
+offset_right = 313.0
+offset_bottom = 585.0
 texture = ExtResource("2_7g5y6")
 expand_mode = 1
 

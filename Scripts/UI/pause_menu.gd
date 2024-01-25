@@ -1,5 +1,7 @@
 extends Control
 
+const MENU = preload("res://Scenes/Areas/menu.tscn")
+
 func resume():
 	get_tree().paused = false
 	hide()
@@ -28,10 +30,10 @@ func _on_resume_pressed():
 
 
 func _on_settings_pressed():
-	pass # Replace with function body.
+	get_tree().quit()
 
 
 func _on_main_menu_pressed():
 	var to_main_menu := func():
-		get_tree().change_scene_to_file("res://Scenes/Areas/menu.tscn")
+		get_tree().change_scene_to_packed(MENU)
 	to_main_menu.call_deferred()

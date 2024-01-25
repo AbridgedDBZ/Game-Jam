@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bt3ywbek4rgbl"]
+[gd_scene load_steps=20 format=3 uid="uid://bt3ywbek4rgbl"]
 
 [ext_resource type="Texture2D" uid="uid://b4libk687dpne" path="res://Art/Houses Demo/_PNG/FL_Houses_Houses.png" id="1_114hn"]
 [ext_resource type="Texture2D" uid="uid://bo6mre8u2550j" path="res://Art/Houses Demo/_PNG/FL_Houses_decoratives.png" id="2_284g0"]
@@ -9,7 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://bjo5ubdnsbb8h" path="res://Art/Houses Demo/Exterrior/ready_to_use_houses.png" id="7_0psr7"]
 [ext_resource type="PackedScene" uid="uid://ccrsalhhu8ug5" path="res://Scenes/Sprites/mummy.tscn" id="8_pks7f"]
 [ext_resource type="PackedScene" uid="uid://bakyoalvmxq6" path="res://Scenes/Reuse/door.tscn" id="9_l52h3"]
-[ext_resource type="PackedScene" path="res://Scenes/Use later/pause_menu.tscn" id="10_7q02e"]
+[ext_resource type="PackedScene" uid="uid://cqlbatywgjvr7" path="res://Scenes/Use later/pause_menu.tscn" id="10_7q02e"]
+[ext_resource type="PackedScene" uid="uid://b67dsace1drxc" path="res://Scenes/Areas/menu.tscn" id="10_n0gr3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_27lu1"]
 texture = ExtResource("1_114hn")
@@ -3440,6 +3441,9 @@ position = Vector2(-1382, 941)
 next_change_scene = "res://Scenes/Areas/lexs_house.tscn"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="menu" parent="CanvasLayer" instance=ExtResource("10_n0gr3")]
+visible = false
 
 [node name="Pause Menu" parent="CanvasLayer" instance=ExtResource("10_7q02e")]
 visible = false
