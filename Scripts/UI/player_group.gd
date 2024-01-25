@@ -6,9 +6,9 @@ var index: int = 0
 
 func _ready():
 	enemies = get_children()
-	for i in enemies.size():
-		enemies[i].position = Vector2(0, i * 86)
 	enemies_size = enemies.size() - 1
+	for i in enemies_size + 1:
+		enemies[i].position = Vector2(0, i * 86)
 	enemies[0].focus()
 
 func _on_enemy_group_next_player():

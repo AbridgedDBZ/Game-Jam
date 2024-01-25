@@ -12,9 +12,9 @@ signal next_player
 
 func _ready():
 	enemies = get_children()
-	for i in enemies.size():
+	enemy_size = enemies.size()	
+	for i in enemy_size:
 		enemies[i].position = Vector2(0, i * 86)
-	enemy_size = enemies.size()
 	show_choice()
 
 func _process(_delta):
